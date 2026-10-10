@@ -502,10 +502,16 @@ Langkah deploy:
 
 | | URL |
 | --- | --- |
-| Base URL API | `https://<nama-site>.netlify.app/api` |
-| Contoh filter | `https://<nama-site>.netlify.app/api/loans?status=Terlambat` |
+| Beranda & daftar endpoint | <https://mod1ppba.netlify.app> |
+| Base URL API | <https://mod1ppba.netlify.app/api> |
+| Contoh filter | <https://mod1ppba.netlify.app/api/loans?status=Terlambat> |
+| Daftar peminjaman (JSON) | <https://mod1ppba.netlify.app/api/loans> |
 
-> Ganti `<nama-site>` dengan nama site Netlify Anda.
+Semua endpoint pada tabel sebelumnya dapat dipanggil dengan mengganti `http://localhost:3000` menjadi `https://mod1ppba.netlify.app`, contoh:
+
+```bash
+curl "https://mod1ppba.netlify.app/api/loans?status=Terlambat"
+```
 
 ### Catatan platform
 
