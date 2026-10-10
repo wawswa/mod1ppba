@@ -1,0 +1,13 @@
+[build]
+  command = "mkdir -p public"
+  publish = "public"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Semua request /api/* diteruskan ke Express yang dibungkus serverless-http.
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true

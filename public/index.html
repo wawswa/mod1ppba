@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Library Loan API</title>
+    <style>
+      :root { color-scheme: light dark; }
+      body {
+        margin: 0;
+        padding: 3rem 1.5rem;
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+        line-height: 1.6;
+        max-width: 46rem;
+        margin-inline: auto;
+      }
+      h1 { margin-bottom: 0.25rem; font-size: 1.6rem; }
+      p.sub { margin-top: 0; opacity: 0.7; }
+      table { border-collapse: collapse; width: 100%; margin: 1.5rem 0; }
+      th, td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid #8883; }
+      th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; opacity: 0.7; }
+      code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; }
+      a { color: inherit; }
+      footer { margin-top: 2rem; font-size: 0.85rem; opacity: 0.7; }
+    </style>
+  </head>
+  <body>
+    <h1>Library Loan API</h1>
+    <p class="sub">
+      REST API pencatatan peminjaman buku perpustakaan &mdash; Express.js + Supabase,
+      di-<em>deploy</em> sebagai Netlify Function.
+    </p>
+
+    <table>
+      <thead>
+        <tr><th>Method</th><th>Endpoint</th><th>Keterangan</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>GET</td><td><a href="/api"><code>/api</code></a></td><td>Status API</td></tr>
+        <tr><td>GET</td><td><a href="/api/members"><code>/api/members</code></a></td><td>Daftar anggota</td></tr>
+        <tr><td>GET</td><td><a href="/api/books"><code>/api/books</code></a></td><td>Daftar buku</td></tr>
+        <tr><td>GET</td><td><a href="/api/loans"><code>/api/loans</code></a></td><td>Daftar peminjaman</td></tr>
+        <tr>
+          <td>GET</td>
+          <td><a href="/api/loans?status=Terlambat"><code>/api/loans?status=Terlambat</code></a></td>
+          <td>Filter peminjaman terlambat</td>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td><a href="/api/loans?status=Dipinjam"><code>/api/loans?status=Dipinjam</code></a></td>
+          <td>Filter peminjaman aktif</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Setiap resource juga mendukung <code>POST</code> (tambah),
+      <code>GET /:id</code> (detail), <code>PUT /:id</code> (ubah), dan
+      <code>DELETE /:id</code> (hapus).
+    </p>
+
+    <footer>
+      Dokumentasi lengkap, contoh request/response, dan panduan instalasi ada di
+      <a href="https://github.com/">README.md repositori</a>.
+    </footer>
+  </body>
+</html>

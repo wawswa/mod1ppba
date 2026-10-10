@@ -1,0 +1,23 @@
+{
+  "name": "ppb_mod1_library_api",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "REST API layanan pencatatan peminjaman buku perpustakaan",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.113.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "serverless-http": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
